@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*body{
+	background-image: url(img/DSC_1045.JPG);
+	color: white;
+}*/
+
+/*-------------Mobile Version-----------*/
+
+/*------Mobile Base Grid------*/
+/* Base Grid setup is a single columns: */
+/* While "content" class should have 	*/
+/* another grid in it.					*/
+
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"title"
+	"header"
+	"content"
+	"sidebar"
+	"footer";
+}
+
+/*------Title Section-------*/
+.title {
+	grid-area: title;
+	display: grid;
+	height: 300px;
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	background: rgba(212, 252, 249, 1) url(img/DSC_1045.JPG) center 0px;
+	-webkit-background-size: 100% 100%;
+}
+
+ .jollie{
+ 	display: grid;
+ 	font-size: 1em;
+ 	color: rgba(252, 177, 65, 1);
+ 	justify-self: center;
+ 	align-self: center;
+ 	background: rgba(128, 128, 128, 0.85);
+ 	padding: 5%;
+ 	border-radius: 15% 15%;
+ 	border: .2em solid rgba(252, 177, 65, 1);
+ }
+
+ /*------Header Section------*/
+
+.header {
+	grid-area: header;
+	
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.header li {
+	font-size: 1.5em;
+	color: white;
+    float: right;
+}
+
+.header li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.header li a:hover {
+    background-color: #111;
+}
+
+/*.header li {
+	font-size: 1.5em;
+	margin: 0 5px;
+    display: inline;
+}*/
+
+.sidebar {
+	grid-area: sidebar;
+	justify-self: center;
+}
+
+.content {
+	grid-area: content;
+	justify-self: center;
+}
+
+.footer {
+	grid-area: footer;
+	justify-self: center;
+	display: block;
+}
+
+
+/*---------Desktop Version-----------*/
+@media screen  and (min-width: 736px) 
+{
+	.grid {
+		display: grid;
+		grid-template-columns: 10% 1fr 1fr 1fr 10%;
+		grid-template-areas: 
+		"title title title title title"
+		". header header header ."
+		". content content sidebar ."
+		". content content sidebar ."
+		". content content . ."
+		". footer footer footer .";
+	}
+
+	.title {
+	grid-area: title;
+	display: grid;
+	height: 900px;
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	background: green url(img/DSC_1045.JPG) center 0px;
+	-webkit-background-size: 100% 100%;
+	}
+
+	.jollie{
+ 	font-size: 2em;
+ 	color: rgba(252, 177, 65, 1);
+ 	justify-self: center;
+ 	align-self: center;
+ 	background: rgba(128, 128, 128, 0.85);
+ 	padding: 5%;
+ 	border-radius: 15% 15%;
+ 	border: .2em solid rgba(252, 177, 65, 1);
+ }
+
+}
