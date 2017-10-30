@@ -93,9 +93,11 @@
 /*--------Main Content Section --------*/
 /*additional grid inside*/
 
+
 .innerGrid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	z-index: 1;
 }
 
 .innerGrid div{
@@ -104,8 +106,15 @@
 	align-self: center;
 	background-color: grey;
 	z-index: 1;
+	width: 100%;
 }
-
+.content {
+	grid-area: content;
+	justify-self: center;
+	border: 1em solid black;
+}
+/*Products will need despriction
+with more individual functions
 #product1 {
 	width:100%;
 }
@@ -128,22 +137,27 @@
 
 #product6 {
 	width:100%;
-}
+}*/
 
-.content {
-	grid-area: content;
-	justify-self: center;
-	border: 1em solid black;
-}
 
 /*--------Sidebar/About Bar--------*/
 
 .sidebar {
 	grid-area: sidebar;
 	justify-self: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	font-size-adjust: 2em:;
+	padding:2em 0em;
 	background: grey;
-	border:10em solid white;
-	border-radius: 20%;
+	border-radius: 10%;
+}
+
+#utilityMenu li{
+	list-style-type: none;
+	display: inline;
+	padding: 2em 0em;
 }
 
 
@@ -169,7 +183,15 @@
     float: center;
 }
 
-.footer li a {
+#menuFooter li {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 2em 2em;
+    text-decoration: none;
+}
+
+#menuFooter li a{
     display: inline;
     color: white;
     text-align: center;
@@ -179,7 +201,7 @@
 
 
 /*---------Desktop Additions-----------*/
-@media screen  and (min-width: 736px) 
+@media screen  and (min-width: 1180px) 
 {
 	.grid {
 		display: grid;
