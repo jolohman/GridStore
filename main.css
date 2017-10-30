@@ -51,6 +51,12 @@
  	border: .2em solid rgba(252, 177, 65, 1);
  }
 
+ .btn {
+ 	text-align: center;
+ 	color: white;
+ 	font-weight: bold;
+ }
+
  /*------Header Section------*/
 
 .header {
@@ -84,19 +90,13 @@
     background-color: #111;
 }
 
-/*.header li {
-	font-size: 1.5em;
-	margin: 0 5px;
-    display: inline;
-}*/
-
-.sidebar {
-	grid-area: sidebar;
+.content {
+	grid-area: content;
 	justify-self: center;
 }
 
-.content {
-	grid-area: content;
+.sidebar {
+	grid-area: sidebar;
 	justify-self: center;
 }
 
