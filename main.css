@@ -90,24 +90,95 @@
     background-color: #111;
 }
 
+/*--------Main Content Section --------*/
+/*additional grid inside*/
+
+.innerGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.innerGrid div{
+	display: grid;
+	justify-self: center;
+	align-self: center;
+	background-color: grey;
+	z-index: 1;
+}
+
+#product1 {
+	width:100%;
+}
+
+#product2 {
+	width:100%;
+}
+
+#product3 {
+	width:100%;
+}
+
+#product4 {
+	width:100%;
+}
+
+#product5 {
+	width:100%;
+}
+
+#product6 {
+	width:100%;
+}
+
 .content {
 	grid-area: content;
 	justify-self: center;
+	border: 1em solid black;
 }
+
+/*--------Sidebar/About Bar--------*/
 
 .sidebar {
 	grid-area: sidebar;
 	justify-self: center;
+	background: grey;
+	border:10em solid white;
+	border-radius: 20%;
 }
+
+
+/*--------Footer--------*/
 
 .footer {
 	grid-area: footer;
-	justify-self: center;
-	display: block;
+	justify-align: right;
+	display: inline-block;
+}
+
+.footer ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.footer li {
+	font-size: .8em;
+	color: white;
+    float: center;
+}
+
+.footer li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
 }
 
 
-/*---------Desktop Version-----------*/
+/*---------Desktop Additions-----------*/
 @media screen  and (min-width: 736px) 
 {
 	.grid {
@@ -115,33 +186,40 @@
 		grid-template-columns: 10% 1fr 1fr 1fr 10%;
 		grid-template-areas: 
 		"title title title title title"
-		". header header header ."
+		"header header header header hBlack"
 		". content content sidebar ."
 		". content content sidebar ."
 		". content content . ."
-		". footer footer footer .";
+		"footer footer footer footer footer";
 	}
 
 	.title {
-	grid-area: title;
-	display: grid;
-	height: 900px;
-	width: 100%;
-	max-width: 100%;
-	margin: auto;
-	background: green url(img/DSC_1045.JPG) center 0px;
-	-webkit-background-size: 100% 100%;
+		grid-area: title;
+		display: grid;
+		height: 900px;
+		width: 100%;
+		max-width: 100%;
+		margin: auto;
+		background: green url(img/DSC_1045.JPG) center 0px;
+		-webkit-background-size: 100% 100%;
 	}
 
 	.jollie{
- 	font-size: 2em;
- 	color: rgba(252, 177, 65, 1);
- 	justify-self: center;
- 	align-self: center;
- 	background: rgba(128, 128, 128, 0.85);
- 	padding: 5%;
- 	border-radius: 15% 15%;
- 	border: .2em solid rgba(252, 177, 65, 1);
- }
+	 	font-size: 2em;
+	 	color: rgba(252, 177, 65, 1);
+	 	justify-self: center;
+	 	align-self: center;
+	 	background: rgba(128, 128, 128, 0.85);
+	 	padding: 5%;
+	 	border-radius: 15% 15%;
+	 	border: .2em solid rgba(252, 177, 65, 1);
+ 	}
+
+ 	.hBlack {
+ 		grid-area: hBlack;
+ 		display: grid;
+ 		background-color: #333;
+ 	}
 
 }
+
